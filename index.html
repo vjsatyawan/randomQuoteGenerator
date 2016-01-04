@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Random Quote Generator By Satyawan.Me</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+
+  <style>
+  .navbar {
+      margin-bottom: 0;
+      background-color: rgb(0,150,180);
+      font-family: Montserrat, sans-serif;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: rgb(0,150,180) !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+
+  body{
+	font: 400 15px Montserrat, sans-serif;
+    line-height: 1.8;
+    background-color: rgb(0,150,180);
+}
+
+blockquote {
+	font-size: 24px;
+}
+
+#jumbotron{ 
+    background-color: rgb(0,150,180);
+    font-family: Montserrat, sans-serif;
+    color: #ffffff;
+  padding: 100px 25px;
+  margin-bottom:0;
+}
+
+
+  </style>
+</head>
+<body id="home" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<!-- NavBar -->
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" style="background-color:white"class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#home">Satyawan.Me</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#technologies">Stuffs I Love</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+<!-- Intro -->
+<div id="jumbotron" class="jumbotron text-center">
+  <div class="container">
+    <h1>Random Quote Generator</h1> 
+ 
+    <blockquote><p id="randomQuote"> Here Random Quote will be generated!</p></blockquote> 
+ 
+      <button class="btn btn-default btn-lg " onclick="printquote()"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">New Quote</span></button>
+      <a id="tweetLink" href="http://twitter.com/home/?status=Here Random Quote will be generated!" target="_blank"> <button class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Tweet</span></button></a>
+  </div>
+</div>
+  
+<div class="footer container">
+<hr>
+<footer class="text-center">
+  <p class="text-center">Developed By: <a href="http://linkedin.com/in/vjsatyawan"  target="_blank" style="text-decoration: none; color:rgb(51,51,51)">Satyawan Jagankar</a></p> 
+</footer>
+</div>
+
+
+
+
+<script type="text/javascript"> 
+    var quote = new Array()
+    quote[0] = 'HTML for quote number 1'
+    quote[1] = 'HTML for quote number 2'
+    quote[2] = 'HTML for quote number 3'
+    quote[3] = 'HTML for quote number 4'
+    quote[4] = 'HTML for quote number 5'
+    quote[5] = 'HTML for quote number 6'
+    quote[6] = 'HTML for quote number 7'
+    quote[7] = 'HTML for quote number 8'
+    quote[8] = 'HTML for quote number 9'
+    quote[9] = 'HTML for quote number 10'
+
+    function printquote(){
+    	var randomquote = Math.floor(Math.random()*(quote.length));
+    	var newQuote = quote[randomquote];
+    	document.getElementById("randomQuote").innerHTML = newQuote;
+    	document.getElementById("tweetLink").setAttribute("href","http://twitter.com/home/?status="+newQuote);
+  	}
+    </script>
+
+
+</body>
+</html>
