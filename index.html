@@ -1,136 +1,156 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Theme Made By www.w3schools.com - No Copyright -->
+ 
   <title>Random Quote Generator By Satyawan.Me</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
   
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
   <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-
-
   <style>
-  .navbar {
-      margin-bottom: 0;
-      background-color: rgb(0,150,180);
-      font-family: Montserrat, sans-serif;
-      z-index: 9999;
-      border: 0;
-      font-size: 12px !important;
-      line-height: 1.42857143 !important;
-      letter-spacing: 4px;
-      border-radius: 0;
-  }
-  .navbar li a, .navbar .navbar-brand {
-      color: #fff !important;
-  }
-  .navbar-nav li a:hover, .navbar-nav li.active a {
-      color: rgb(0,150,180) !important;
-      background-color: #fff !important;
-  }
-  .navbar-default .navbar-toggle {
-      border-color: transparent;
-      color: #fff !important;
-  }
+ 
 
   body{
-	font: 400 15px Montserrat, sans-serif;
+    font: 400 15px Montserrat, sans-serif;
     line-height: 1.8;
-    background-color: rgb(0,150,180);
+    background-color:rgba(0,150,180,1);
 }
 
-blockquote {
-	font-size: 24px;
+blockquote, blockquote footer{color:white;
 }
 
+
+blockquote{
+margin-top:70px;
+text-align:left;
+}
+
+
+blockquote footer{
+text-align:right;
+}
+
+    
 #jumbotron{ 
-    background-color: rgb(0,150,180);
+background-color:rgba(0,0,180,0);
     font-family: Montserrat, sans-serif;
     color: #ffffff;
   padding: 100px 25px;
-  margin-bottom:0;
 }
 
+ #randomQuote{
+    font-size:28px;
+   font-style: normal;
+    }
+    
+.footer{
+display:none;
+}
 
   </style>
 </head>
-<body id="home" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-<!-- NavBar -->
-<nav id="navbar" class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" style="background-color:white"class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span> 
-      </button>
-      <a class="navbar-brand" href="#home">Satyawan.Me</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#technologies">Stuffs I Love</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-
-
-
-
+<body>
 <!-- Intro -->
 <div id="jumbotron" class="jumbotron text-center">
   <div class="container">
-    <h1>Random Quote Generator</h1> 
- 
-    <blockquote><p id="randomQuote"> Here Random Quote will be generated!</p></blockquote> 
- 
-      <button class="btn btn-default btn-lg " onclick="printquote()"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">New Quote</span></button>
+    <h1 class="">Random Quote Generator</h1> 
+   <div class="row" style="margin-bottom:40px">
+    <blockquote class="col-md-6 col-md-offset-3"><p><i class="fa fa-quote-left fa-fw"></i> <i id="randomQuote">Amra natun jouban er e duut. </i><i class="fa fa-quote-right fa-fw"></i></p><footer><cite id="citeNm">Rabindranath Tagore</cite></footer></blockquote>
+    <div class="col-md-3"></div>
+    </div>
+     <button class="btn btn-default btn-lg " onclick="printquote()"><i class="fa fa-quote-left fa-fw"></i> <span class="network-name">New Quote</span></button>
       <a id="tweetLink" href="http://twitter.com/home/?status=Here Random Quote will be generated!" target="_blank"> <button class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Tweet</span></button></a>
   </div>
 </div>
-  
-<div class="footer container">
-<hr>
-<footer class="text-center">
-  <p class="text-center">Developed By: <a href="http://linkedin.com/in/vjsatyawan"  target="_blank" style="text-decoration: none; color:rgb(51,51,51)">Satyawan Jagankar</a></p> 
-</footer>
-</div>
+
+
+<script>
+       var quote = new Array()
+    quote[0] = ' People can die but their words will resound forever. '
+    quote[1] = ' Glory is fleeting,but obscurity is forever. '
+    quote[2] = ' I dont feel obliged to believe tht the same god who has endowedus with sense, reason and intellect has intended us to forgo their use. '
+    quote[3] = ' Be yourself, everyone else is already taken. '
+    quote[4] = ' Be who u r and say wht u feel, becz those who mind dont matter and those who matter dnt mind. '
+    quote[5] = ' You only live once,bt if u do it right,once is enough. '
+    quote[6] = ' Be the change tht u wish to see in the world. '  
+    quote[7] = ' If u want to know what a mans like,take a good look at how he treats his inferiors,not his equalss. '
+    quote[8] = ' Two things are infinite:the universe and human stupidity; I am not sure about the universe. '
+   quote[9] = ' Intajar karne walonko utna hi milta hai, Jitna koshish karne wale chhod dete hai. '
+   quote[10] = '  You can undo almost everything, give time.  '
+ quote[11] = '  People are lonely because they built walls instead of bridges  '
+   quote[12] = '  Jio aur jine do.  '
+   quote[13] = '  Chukila maafi nahi.  '
+   quote[14] = '  Chite ki chal, Baaj ki najar aur bajirao ki talwar pe kabhi sandeh nahin karte.. Kabhibhi maat de sakte hai.  '
+ quote[15] = '  Honesty is best policy than LIC policy..   '
+ quote[16] = '  You have to be odd to be number one.  '
+quote[17] = '  Wolves dont loose sleep over the opinion of sheep.  '
+
+
+    var citeName = new Array()
+
+  citeName[0] = 'Nilanjana Mandal'
+  citeName[1] = 'Napoleon Bonaparte'
+  citeName[2] = 'Galileo galilei'
+  citeName[3] = 'Oscar wilde'
+  citeName[4] = 'Bernard M.Baruch'
+  citeName[5] = 'Mae West'
+  citeName[6] = 'Mahatma Gandhi'
+  citeName[7] = 'J.K.Rowling'
+  citeName[8] = 'Albert Einstein'
+  citeName[9] = 'Nagesh Patidar'
+  citeName[10] = 'Nilanjana Mandal'
+  citeName[11] = 'Nilanjana Mandal'
+  citeName[12] = 'Bhawana Kataria'
+  citeName[13] = 'Pravin Pangare'
+  citeName[14] = 'Vinod Yendhe'
+  citeName[15] = 'Prasad Rayudu'
+  citeName[16] = 'Amit Kumar Yadav'
+  citeName[17] = 'Amit Kumar Yadav'
 
 
 
+var bgClr = new Array()
+bgClr[0] = 'rgba(125,25,10,1)'
+bgClr[1] = 'rgba(30,10,18,1)'
+bgClr[2] = 'rgba(110,10,10,1)'
+bgClr[3] = 'rgba(50,15,10,1)'
+bgClr[4] = 'rgba(80,150,180,1)'
+bgClr[5] = 'rgba(80,50,10,1)'
+bgClr[6] = 'rgba(60,80,18,1)'
+bgClr[7] = 'rgba(90,10,0,1)'
+bgClr[8] = 'rgba(0,150,10,1)'
+bgClr[9] = 'rgba(15,25,180,1)'
+bgClr[10] = 'rgba(125,25,10,1)'
+bgClr[11] = 'rgba(125,25,10,1)'
+bgClr[12] = 'rgba(11,25,60,1)'
+bgClr[13] = 'rgba(03,30,19,1)'
+bgClr[14] = 'rgba(100,25,60,1)'
+bgClr[15] = 'rgba(90,65,90,1)'
+bgClr[16] = 'rgba(90,65,90,1)'
+bgClr[17] = 'rgba(90,65,90,1)'
 
-<script type="text/javascript"> 
-    var quote = new Array()
-    quote[0] = 'HTML for quote number 1'
-    quote[1] = 'HTML for quote number 2'
-    quote[2] = 'HTML for quote number 3'
-    quote[3] = 'HTML for quote number 4'
-    quote[4] = 'HTML for quote number 5'
-    quote[5] = 'HTML for quote number 6'
-    quote[6] = 'HTML for quote number 7'
-    quote[7] = 'HTML for quote number 8'
-    quote[8] = 'HTML for quote number 9'
-    quote[9] = 'HTML for quote number 10'
+
 
     function printquote(){
-    	var randomquote = Math.floor(Math.random()*(quote.length));
-    	var newQuote = quote[randomquote];
-    	document.getElementById("randomQuote").innerHTML = newQuote;
-    	document.getElementById("tweetLink").setAttribute("href","http://twitter.com/home/?status="+newQuote);
-  	}
+      var randomNum = Math.floor(Math.random()*(quote.length));
+      var newQuote = quote[randomNum];
+        var newCite = citeName[randomNum];
+  var newBg = bgClr[randomNum];
+
+      document.getElementById("randomQuote").innerHTML = newQuote;
+  document.getElementById("citeNm").innerHTML = newCite;
+  document.body.style.background = newBg;
+      document.getElementById("tweetLink").setAttribute("href","http://twitter.com/home/?status="+newQuote);
+    }
     </script>
 
-
+ 
 </body>
 </html>
