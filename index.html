@@ -149,6 +149,20 @@ bgClr[17] = 'rgba(90,65,90,1)'
   document.body.style.background = newBg;
       document.getElementById("tweetLink").setAttribute("href","http://twitter.com/home/?status="+newQuote);
     }
+    function myTimer() {
+   
+	   var randomNum = Math.floor(Math.random()*(quote.length));
+	      var newQuote = quote[randomNum];
+	        var newCite = citeName[randomNum];
+	  var newBg = bgClr[randomNum];
+
+	      document.getElementById("randomQuote").innerHTML = newQuote;
+	  document.getElementById("citeNm").innerHTML = newCite;
+	  document.body.style.background = newBg;
+	      document.getElementById("tweetLink").setAttribute("href","http://twitter.com/home/?status="+newQuote);
+   	}
+ 
+    
     </script>
 
  
